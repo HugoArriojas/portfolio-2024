@@ -1,0 +1,5 @@
+
+@layer base {
+  .page {
+    @apply w-full h-screen overflow-hidden;
+}
