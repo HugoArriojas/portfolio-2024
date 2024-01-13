@@ -1,3 +1,11 @@
+// icons
+import {
+  HiHome,
+  HiUser,
+  HiViewColumns,
+  HiEnvelope,
+} from 'react-icons/hi2';
+
 // nav data
 export const navData = [
   { name: 'home', path: '/', icon: <HiHome /> },
@@ -10,8 +18,29 @@ export const navData = [
   },
 ];
 
+// next link
+import Link from 'next/link';
+// next router
+import { useRouter } from 'next/router';
+
 const Nav = () => {
-  return <nav>nav</nav>;
+  const router = useRouter();
+  const pathname = router.pathname;
+  return (
+    <nav>
+      <div>
+          return (
+            <Link>
+              <div>
+                    {link.name}
+                  </div>
+              {link.icon}
+            </Link>
+          );
+        })}
+      </div>
+    </nav>
+  );
 };
 
 export default Nav;
