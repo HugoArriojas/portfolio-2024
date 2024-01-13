@@ -28,12 +28,18 @@ const Nav = () => {
   const pathname = router.pathname;
   return (
     <nav>
+      {/* Inner */}
       <div>
+        {navData.map((link, index) => {
           return (
-            <Link>
-              <div>
-                    {link.name}
-                  </div>
+            <Link
+              className={`${link.path === pathname}s`}
+              href={link.path}
+              key={index}
+            >
+              {/* Tooltip */}
+              <div>{link.name}</div>
+              {/* Icon */}
               {link.icon}
             </Link>
           );
