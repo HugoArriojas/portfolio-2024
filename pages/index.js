@@ -64,9 +64,8 @@ const Home = () => {
         >
           <Headshot />
         </motion.div>
-          </motion.div>
-        </div>
       </div>
+    </div>
   );
 };
 
