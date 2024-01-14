@@ -12,7 +12,7 @@ const Home = () => {
     <div className="bg-primary/60 h-full">
       {/* Text */}
       <div className="w-full h-full bg-gradient-to-r from-primary/10 via-black/30 to-bacl/10">
-        <div className="text-center flex flex-col justify-center xl:pt-40 xl:text-left h-full container mx-auto">
+        <div className="text-center flex flex-col justify-center ms-[100px] xl:pt-40 xl:text-left h-full container mx-auto">
           {/* Name */}
           <motion.h1
             variants={fadeIn('down', 0.2)}
@@ -29,7 +29,7 @@ const Home = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="max-w-md xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16"
+            className="max-w-md xl:max-w-sm mx-auto xl:mx-0 mb-10 xl:mb-16"
           >
             Software engineer & scrum master with experience in white label
             e-commerce solutions
