@@ -1,4 +1,5 @@
 import ProjectsBtn from '../components/ProjectsBtn';
+import Headshot from '../components/Headshot';
 
 // framer motion
 import { motion } from 'framer-motion';
@@ -45,6 +46,24 @@ const Home = () => {
             className="hidden xl:flex"
           >
             <ProjectsBtn />
+          </motion.div>
+        </div>
+      </div>
+      {/* image */}
+      <div className="w-[1200px] h-full absolute right-0 bottom-0">
+        {/* bg image */}
+        <div className="bg-none xl:bg-explosion xl:bg-cover xl:bg-right xl:bg-no-repeat w-full h-full absolute mix-blend-color-dodge translate-z-0"></div>
+        {/* headshot */}
+        <motion.div
+          variants={fadeIn('up', 0.3)}
+          initial="hidden"
+          animate="show"
+          exit="hidden"
+          transition={{ duration: 1, ease: 'easeInOut' }}
+          className="w-full h-full max-w max-w-[737px] max-h-[678px] absolute bottom-30 lg:bottom-0 lg:right-[0%]"
+        >
+          <Headshot />
+        </motion.div>
           </motion.div>
         </div>
       </div>
