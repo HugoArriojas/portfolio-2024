@@ -23,7 +23,7 @@ const Home = () => {
             exit="hidden"
             className="h1"
           >
-            Hugo&nbsp;<span className="text-accent">Arriojas</span>
+            From Imagination to <span className="text-accent">Innovation</span>
           </motion.h1>
           {/* Subtitle */}
           <motion.p
