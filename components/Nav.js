@@ -6,14 +6,22 @@ import {
   HiEnvelope,
 } from 'react-icons/hi2';
 
+import { RiArticleFill } from 'react-icons/ri';
+
 // nav data
 export const navData = [
   { name: 'home', path: '/', icon: <HiHome /> },
   { name: 'about', path: '/about', icon: <HiUser /> },
   { name: 'work', path: '/work', icon: <HiViewColumns /> },
   {
+    name: 'resume',
+    path: '/HugoArriojasResume.pdf',
+    icon: <RiArticleFill />,
+    target: '_blank',
+  },
+  {
     name: 'contact',
-    path: '/contact',
+    path: 'mailto:hugo.arriojas@hotmail.com?subject=Hello Hugo',
     icon: <HiEnvelope />,
   },
 ];
@@ -36,6 +44,7 @@ const Nav = () => {
               className={`${link.path === pathname}s`}
               href={link.path}
               key={index}
+              target={link.target}
             >
               {/* Tooltip */}
               <div>{link.name}</div>
