@@ -4,7 +4,7 @@ import Image from 'next/image';
 const Headshot = () => {
   return (
     // <div className="hidden xl:flex xl:max-w-none scale-x-[-1]">
-    <div className="hidden xl:flex scale-x-[-1]">
+    <div className="hidden xl:flex scale-x-[-1] background-image">
       <Image
         src={'/hugo-headshot.png'}
         width={737}
