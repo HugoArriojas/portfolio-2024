@@ -21,7 +21,7 @@ const Home = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="h1 xl:max-w-md"
+            className="h1 xl:max-w-xl"
           >
             From Imagination to <span className="text-accent">Innovation</span>
           </motion.h1>
@@ -31,15 +31,21 @@ const Home = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="max-w-md xl:max-w-sm mx-auto xl:mx-0 mb-10 xl:mb-16"
+            className="max-w-md xl:max-w-lg mx-auto xl:mx-0 mb-10 xl:mb-16"
           >
             Software engineer & scrum master with experience in white label
             e-commerce solutions
           </motion.p>
           {/* button */}
-          <div className="flex justify-center lg:hidden relative">
+          <motion.div
+            variants={fadeIn('right', 0.4)}
+            initial="hidden"
+            animate="show"
+            exit="hidden xl:flex"
+            className="flex justify-center lg:hidden relative"
+          >
             <ProjectsBtn />
-          </div>
+          </motion.div>
           <motion.div
             variants={fadeIn('right', 0.4)}
             initial="hidden"
