@@ -9,9 +9,9 @@ import Socials from '../components/Socials';
 
 const Header = () => {
   return (
-    <header className="absolute z-50 w-full flex items-center sm:px-16 xl:px-0 h-[85px]">
+    <header className="absolute z-50 w-full flex items-center xl:px-0 h-[85px]">
       <div className="container mx-auto">
-        <div className="flex flex-row justify-between items-center pt-8 pb-5 lg:pl-5">
+        <div className="flex flex-row justify-between items-center pt-8 pb-5 px-2 md:px-0">
           <Link href={'/'}>
             <Image
               src={'/hugo-logo.svg'}
