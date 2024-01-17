@@ -106,6 +106,17 @@ const WorkSlider = () => {
                 </Link>
               </div>
             </div>
+
+            <div className=" my-auto max-w-[600px]">
+              <Image
+                src={slide.path}
+                width={600}
+                height={385}
+                alt=""
+                className="rounded-lg"
+              />
+              {/* overlay gradient */}
+              <div className="absolute inset-0 bg-gradient-to-l from-[#2a136e] via-[#2a136e] to-[#4a22bd] opacity-0 md:group-hover:opacity-100 focus:opacity-100 transition-all duration-700 rounded-lg max-w-[600px] mx-auto">
                 {/* text */}
                 <div>
                   <h2>{slide.title}</h2>
