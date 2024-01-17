@@ -3,7 +3,6 @@ import { loadFull } from 'tsparticles';
 import React, { useCallback } from 'react';
 
 const ParticlesContainer = () => {
-  // init
   const particlesInit = useCallback(async (engine) => {
     await loadFull(engine);
   }, []);
@@ -23,7 +22,7 @@ const ParticlesContainer = () => {
             value: 'transparent',
           },
         },
-        fps_limit: 120,
+        fps_limit: 60,
         particles: {
           color: {
             value: '#fe6192',
@@ -49,7 +48,7 @@ const ParticlesContainer = () => {
             straight: false,
           },
           number: {
-            value: 60,
+            value: 80,
             density: {
               enable: true,
               area: 800,
@@ -68,18 +67,15 @@ const ParticlesContainer = () => {
         detectRetina: true,
         interactivity: {
           modes: {
-            push: {
-              quantity: 3,
-            },
             repulse: {
               distance: 100,
-              duration: 1,
+              duration: 10,
             },
           },
           events: {
             onClick: {
               enable: true,
-              mode: 'push',
+              mode: 'repulse',
             },
             onHover: {
               enable: true,
