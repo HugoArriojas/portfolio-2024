@@ -79,11 +79,12 @@ const WorkSlider = () => {
         return (
           <SwiperSlide key={index}>
             {/* mobile text */}
-            <div>
+            <div className="md:hidden pt-5">
               <h2>{slide.title}</h2>
-              <p>{slide.blurb}</p>
-              <div>
+              <p className="md:hidden py-1">{slide.blurb}</p>
+              <div className="flex justify-between w-[60%] gap-x-5 py-5">
                 <Link
+                  className="flex items-center gap-x-2 text-[13px] tracking-[0.2em]"
                   href={slide.link}
                   target="_blank"
                   cursor-pointer
@@ -107,42 +108,49 @@ const WorkSlider = () => {
               </div>
             </div>
 
-            <div className=" my-auto max-w-[600px]">
-              <Image
-                src={slide.path}
-                width={600}
-                height={385}
-                alt=""
-                className="rounded-lg"
-              />
-              {/* overlay gradient */}
-              <div className="absolute inset-0 bg-gradient-to-l from-[#2a136e] via-[#2a136e] to-[#4a22bd] opacity-0 md:group-hover:opacity-100 focus:opacity-100 transition-all duration-700 rounded-lg max-w-[600px] mx-auto">
-                {/* text */}
-                <div>
-                  <h2>{slide.title}</h2>
-                  <p className="hidden md:block py-8">{slide.blurb}</p>
-                  <Link
-                    className="flex items-center gap-x-2 text-[13px] tracking-[0.2em] py-5"
-                    href={slide.link}
-                    target="_blank"
-                    cursor-pointer
-                  >
-                    <p>LIVE PROJECT</p>
-                    <div>
-                      <BsArrowRight />
+            <div className="max-h-[350px] flex pb-[10%] md:pb-0">
+              <div className="relative w-full max-w flex items-start justify-center group overflow-hidden h-[305px]">
+                <div className=" my-auto max-w-[600px]">
+                  <Image
+                    src={slide.path}
+                    width={600}
+                    height={385}
+                    alt=""
+                    className="rounded-lg"
+                  />
+                  {/* overlay gradient */}
+                  <div className="absolute inset-0 bg-gradient-to-l from-[#2a136e] via-[#2a136e] to-[#4a22bd] opacity-0 md:group-hover:opacity-100 focus:opacity-100 transition-all duration-700 rounded-lg max-w-[600px] mx-auto">
+                    {/* text */}
+                    <div className="hidden absolute bottom-0 translate-y-full md:group-hover:block md:group-hover:-translate-y-10 group-hover:xl:-translate-y-5 transition-all duration-300 px-5">
+                      <h2>{slide.title}</h2>
+                      <p className="hidden md:block py-8">{slide.blurb}</p>
+                      <Link
+                        className="flex items-center gap-x-2 text-[13px] tracking-[0.2em] py-5"
+                        href={slide.link}
+                        target="_blank"
+                        cursor-pointer
+                      >
+                        <p className="delay-100 font-bold">LIVE</p>
+                        <p className="hidden translate-y-[500%] group-hover:block group-hover:translate-y-0 transition-all duration-300 delay-150 font-bold">
+                          PROJECT
+                        </p>
+                        <div className="hidden text-xl translate-y-[500%] group-hover:block group-hover:translate-y-0 transition-all duration-300 delay-200">
+                          <BsArrowRight />
+                        </div>
+                      </Link>
+                      <Link
+                        className="flex items-center gap-x-2 text-[13px] tracking-[0.2em]"
+                        href={slide.github}
+                        target="_blank"
+                        cursor-pointer
+                      >
+                        <p className="delay-100 font-bold">GITHUB</p>
+                        <div className="hidden text-xl translate-y-[500%] group-hover:block group-hover:translate-y-0 transition-all duration-300 delay-200">
+                          <BsArrowRight />
+                        </div>
+                      </Link>
                     </div>
-                  </Link>
-                  <Link
-                    className="flex items-center text-[13px] tracking-[0.2em]"
-                    href={slide.github}
-                    target="_blank"
-                    cursor-pointer
-                  >
-                    <p className="delay-100 font-bold">GITHUB</p>
-                    <div className="hidden text-xl translate-y-[500%] group-hover:block group-hover:translate-y-0 transition-all duration-300 delay-200">
-                      <BsArrowRight />
-                    </div>
-                  </Link>
+                  </div>
                 </div>
               </div>
             </div>
