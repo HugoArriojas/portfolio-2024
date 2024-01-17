@@ -6,7 +6,7 @@ import { RiLinkedinBoxFill, RiGithubFill } from 'react-icons/ri';
 
 const Socials = () => {
   return (
-    <div className="flex items-center gap-x-5 text-lg">
+    <div className="flex items-center gap-x-5 text-3xl md:text-2xl">
       <Link
         href={'https://linkedin.com/in/hugoarriojas'}
         target="_blank"
