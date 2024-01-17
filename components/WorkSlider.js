@@ -78,6 +78,34 @@ const WorkSlider = () => {
       {workSlider.slides.map((slide, index) => {
         return (
           <SwiperSlide key={index}>
+            {/* mobile text */}
+            <div>
+              <h2>{slide.title}</h2>
+              <p>{slide.blurb}</p>
+              <div>
+                <Link
+                  href={slide.link}
+                  target="_blank"
+                  cursor-pointer
+                >
+                  <p className="font-bold">LIVE&nbsp;PROJECT</p>
+                  <div className="text-xl">
+                    <BsArrowRight />
+                  </div>
+                </Link>
+                <Link
+                  className="flex items-center gap-x-2 text-[13px] tracking-[0.2em]"
+                  href={slide.github}
+                  target="_blank"
+                  cursor-pointer
+                >
+                  <p className="font-bold">GITHUB</p>
+                  <div className="text-xl">
+                    <BsArrowRight />
+                  </div>
+                </Link>
+              </div>
+            </div>
                 {/* text */}
                 <div>
                   <h2>{slide.title}</h2>
