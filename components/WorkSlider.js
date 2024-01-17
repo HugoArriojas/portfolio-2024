@@ -139,7 +139,7 @@ const WorkSlider = () => {
                         </div>
                       </Link>
                       <Link
-                        className="flex items-center gap-x-2 text-[13px] tracking-[0.2em]"
+                        className="flex items-center text-[13px] tracking-[0.2em]"
                         href={slide.github}
                         target="_blank"
                         cursor-pointer
