@@ -68,7 +68,7 @@ const WorkSlider = () => {
         clickable: true,
       }}
       slidesPerView={1}
-      spaceBetween={10}
+      spaceBetween={500}
       modules={[Pagination, Navigation]}
       scrollbar={{
         hide: true,
