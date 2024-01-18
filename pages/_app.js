@@ -9,31 +9,44 @@ import { useRouter } from 'next/router';
 
 // script
 import Script from 'next/script';
+import { useEffect } from 'react';
 
 // framer motion
 import { AnimatePresence, motion } from 'framer-motion';
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
+
+  useEffect(() => {
+    const handleRouteChange = (url) => {
+      gtag.pageview(url);
+    };
+    router.events.on('routeChangeComplete', handleRouteChange);
+    return () => {
+      router.events.off('routeChangeComplete', handleRouteChange);
+    };
+  }, [router.events]);
+
   return (
     <>
       <Script
         strategy="afterInteractive"
-        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GOOGLE_ANALYTICS}`}
+        src="https://www.googletagmanager.com/gtag/js?id=G-XD7K7WC4EB"
       />
       <Script
         id="google-analytics"
         strategy="afterInteractive"
-      >
-        {`
+        dangerouslySetInnerHTML={{
+          __html: `
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', '${process.env.GOOGLE_ANALYTICS}', {
-          page_path: window.location.pathname,
+          gtag('config', 'G-XD7K7WC4EB', {
+            page_path: window.location.pathname,
           });
-        `}
-      </Script>
+        `,
+        }}
+      />
       <link
         rel="icon"
         href="/initialsSquare.png"
