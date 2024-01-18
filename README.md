@@ -17,6 +17,7 @@ Please feel free to contact me using any of the links on my site if you have any
 
 Built with NextJS, Tailwind CSS, and Framer Motion
 
-Use npm run dev to run site
+Use `npm run dev` to run site locally and poke around or
+`npm run build` followed by `npm start` to get a production build
 
 Background images sourced from https://www.unsplash.com
