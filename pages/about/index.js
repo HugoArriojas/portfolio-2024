@@ -9,7 +9,14 @@ import {
   FaFigma,
 } from 'react-icons/fa';
 
-import { SiNextdotjs, SiAdobexd, SiAdobephotoshop } from 'react-icons/si';
+import {
+  SiNextdotjs,
+  SiAdobephotoshop,
+  SiAdobepremierepro,
+  SiAdobeillustrator,
+  SiAdobeindesign,
+  SiAdobexd,
+} from 'react-icons/si';
 
 //  data
 const aboutData = [
@@ -30,7 +37,14 @@ const aboutData = [
       },
       {
         title: 'UI/UX Design',
-        icons: [<FaFigma />, <SiAdobexd />, <SiAdobephotoshop />],
+        icons: [
+          <FaFigma />,
+          <SiAdobexd />,
+          <SiAdobepremierepro />,
+          <SiAdobephotoshop />,
+          <SiAdobeillustrator />,
+          <SiAdobeindesign />,
+        ],
       },
     ],
   },
@@ -38,29 +52,33 @@ const aboutData = [
     title: 'experience',
     info: [
       {
-        title: 'Software Engineer & Scrum Master - Mercatus Technologies Inc.',
+        title: 'Software Engineer & Scrum Master',
+        workplace: 'Mercatus Technologies Inc.',
         stage: '2022 - Present',
       },
       {
         title: 'Freelance Web Developer',
+        workplace: 'Self Employed',
         stage: '2021 - 2022',
       },
       {
-        title: 'Accounting Administrator - Carson Auto Group',
+        title: 'Accounting Administrator',
+        workplace: 'Carson Auto Group',
         stage: '2018 - 2021',
       },
     ],
   },
   {
-    title: 'credentials',
+    title: 'education',
     info: [
       {
-        title: 'Web Development Immersive Certificate - Juno College',
+        title: 'Web Development Immersive Certificate',
+        workplace: 'Juno College',
         stage: '2021',
       },
       {
-        title:
-          'Honours Bachelor of Science in Marine Biology & Statistics - Dalhousie University',
+        title: 'Hons. BSc. in Marine Biology & Statistics',
+        workplace: 'Dalhousie University',
         stage: '2013 - 2017',
       },
     ],
