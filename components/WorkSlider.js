@@ -4,7 +4,8 @@ export const workSlider = {
       title: 'Previous Portfolio',
       path: '/previous-portfolio.png',
       link: 'https://hugo-portfolio-2022.netlify.app/',
-      blurb: 'Previous portfolio page before redesign',
+      blurb:
+        'Previous portfolio page before redesign, note the similar colour scheme to my current portfolio!',
       github: 'https://github.com/HugoArriojas/portfolio-2024',
     },
     {
@@ -12,7 +13,7 @@ export const workSlider = {
       path: '/reactive-retail.png',
       link: 'https://reactiveretail.netlify.app/',
       blurb:
-        'Mock eCommerce site built in React using the FakeStore API and Firebase integration',
+        'Mock eCommerce site built in React using the FakeStore API and Firebase integration; currently working on a backend',
       github: 'https://github.com/HugoArriojas/ReactiveRetail',
     },
     {
@@ -35,7 +36,8 @@ export const workSlider = {
       title: 'Delicious',
       path: '/delicious.png',
       link: 'https://deliciouspsd.netlify.app/',
-      blurb: 'Multi-page conversion of PSD design. My first project!',
+      blurb:
+        'Multi-page conversion of PSD design in a mock client request exercice. My first web development project ever!',
       github: 'https://github.com/HugoArriojas/deliciousPSDConversion',
     },
   ],
