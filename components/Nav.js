@@ -3,7 +3,9 @@ import { HiHome, HiUser, HiViewColumns, HiEnvelope } from 'react-icons/hi2';
 
 import { RiArticleFill } from 'react-icons/ri';
 import React, { useState } from 'react';
-import { Rings } from 'react-loader-spinner';
+import { ThreeCircles } from 'react-loader-spinner';
+
+import { fadeIn } from '../variants';
 
 // nav data
 export const navData = [
@@ -14,7 +16,6 @@ export const navData = [
     name: 'resume',
     path: '/HugoArriojasResume.pdf',
     icon: <RiArticleFill />,
-    target: '_blank',
   },
   {
     name: 'contact',
@@ -60,12 +61,16 @@ const Nav = () => {
               <div>
                 {directedPathname === link.path &&
                 currentPathname !== link.path ? (
-                  <Rings
+                  <ThreeCircles
                     height="20"
                     width="20"
                     color="#fe6192"
-                    ariaLabel="rings-loading"
+                    ariaLabel="loading-icon"
                     wrapperClass=""
+                    variants={fadeIn('down', 1)}
+                    initial="hidden"
+                    animate="show"
+                    exit="hidden"
                   />
                 ) : (
                   link.icon
