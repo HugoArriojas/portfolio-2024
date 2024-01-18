@@ -79,7 +79,7 @@ const WorkSlider = () => {
         return (
           <SwiperSlide key={index}>
             {/* mobile text */}
-            <div className="md:hidden pt-5">
+            <div className="h-[200px]  md:hidden pt-5">
               <h2>{slide.title}</h2>
               <p className="md:hidden py-1">{slide.blurb}</p>
               <div className="flex justify-between w-[60%] gap-x-5 py-5">
@@ -108,9 +108,9 @@ const WorkSlider = () => {
               </div>
             </div>
 
-            <div className="max-h-[350px] flex pb-[10%] md:pb-0">
-              <div className="relative w-full max-w flex items-start justify-center group overflow-hidden h-[305px]">
-                <div className=" my-auto max-w-[600px]">
+            <div className="max-h-[350px] flex">
+              <div className="relative w-full flex items-start justify-center group overflow-hidden h-fit sm:h-[350px]">
+                <div>
                   <Image
                     src={slide.path}
                     width={600}
@@ -119,7 +119,7 @@ const WorkSlider = () => {
                     className="rounded-lg"
                   />
                   {/* overlay gradient */}
-                  <div className="absolute inset-0 bg-gradient-to-l from-[#2a136e] via-[#2a136e] to-[#4a22bd] opacity-0 md:group-hover:opacity-100 focus:opacity-100 transition-all duration-700 rounded-lg max-w-[600px] mx-auto">
+                  <div className="absolute inset-0 bg-gradient-to-l from-[#2a136e] via-[#2a136e] to-[#4a22bd] opacity-0 md:group-hover:opacity-100 focus:opacity-100 transition-all duration-700 rounded-lg max-h-[305px] max-w-[600px] mx-auto">
                     {/* text */}
                     <div className="hidden absolute bottom-0 translate-y-full md:group-hover:block md:group-hover:-translate-y-10 group-hover:xl:-translate-y-5 transition-all duration-300 px-5">
                       <h2>{slide.title}</h2>

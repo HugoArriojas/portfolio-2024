@@ -44,8 +44,7 @@ const Work = () => {
             variants={fadeIn('down', 0.6)}
             initial="hidden"
             animate="show"
-            exit="hidden"
-            className="w-full xl:max-w-[65%] h-full overflow-hidden"
+            className="w-full xl:max-w-[65%] h-fit overflow-hidden max-h-[565px] md:max-h-[390px]"
           >
             <WorkSlider />
           </motion.div>
