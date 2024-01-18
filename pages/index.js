@@ -33,10 +33,9 @@ const Home = () => {
             exit="hidden"
             className="max-w-md xl:max-w-lg mx-auto xl:mx-0 mb-10 xl:mb-16"
           >
-            Software engineer & scrum master with experience in white label
-            e-commerce solutions
+            Software engineer & marine biologist adept in developing e-commerce
+            solutions & dedicated to fostering a more interconnected world
           </motion.p>
-          {/* button */}
           <motion.div
             variants={fadeIn('right', 0.4)}
             initial="hidden"
