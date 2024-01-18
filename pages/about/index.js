@@ -162,13 +162,21 @@ const About = () => {
             Let&apos;s connect and explore the exciting intersections of
             technology and creativity!
           </motion.p>
-          <Link
-            className="text-accent mb-5"
-            href="https://medium.com/@hugo.arriojas/the-stillness-in-storms-4be5fc97e1a9"
-            target="_blank"
+          <motion.p
+            variants={fadeIn('right', 0.4)}
+            initial="hidden"
+            animate="show"
+            exit="hidden"
+            className="xl:max-w-[500px] mx-auto xl:mx-0 mb-6 xl:px-0 text-left font-normal"
           >
-            Read My Story
-          </Link>
+            <Link
+              className="text-accent mb-5"
+              href="https://medium.com/@hugo.arriojas/the-stillness-in-storms-4be5fc97e1a9"
+              target="_blank"
+            >
+              Read My Story
+            </Link>
+          </motion.p>
         </div>
         {/* info */}
         <motion.div
