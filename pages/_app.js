@@ -7,9 +7,10 @@ import Transition from '../components/Transition';
 //router
 import { useRouter } from 'next/router';
 
-// script
+//analytics
 import Script from 'next/script';
 import { useEffect } from 'react';
+import * as gtag from '../lib/gtag';
 
 // framer motion
 import { AnimatePresence, motion } from 'framer-motion';
@@ -31,7 +32,7 @@ function MyApp({ Component, pageProps }) {
     <>
       <Script
         strategy="afterInteractive"
-        src="https://www.googletagmanager.com/gtag/js?id=G-XD7K7WC4EB"
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GA_MEASUREMENT_ID}`}
       />
       <Script
         id="google-analytics"
@@ -41,7 +42,7 @@ function MyApp({ Component, pageProps }) {
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', 'G-XD7K7WC4EB', {
+          gtag('config', '${process.env.GA_MEASUREMENT_ID}', {
             page_path: window.location.pathname,
           });
         `,
