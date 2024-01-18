@@ -17,6 +17,9 @@ import { AnimatePresence, motion } from 'framer-motion';
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
+  useEffect(() => {
+    document.title = 'Hugo Arriojas - Software Engineer';
+  }, []);
 
   useEffect(() => {
     const handleRouteChange = (url) => {
