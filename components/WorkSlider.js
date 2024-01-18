@@ -62,7 +62,7 @@ import { BsArrowRight } from 'react-icons/bs';
 // next image
 import Image from 'next/image';
 
-const WorkSlider = () => {
+const WorkSlider = ({ sliderRef }) => {
   return (
     <Swiper
       navigation={true}
@@ -70,18 +70,20 @@ const WorkSlider = () => {
         clickable: true,
       }}
       slidesPerView={1}
+      loop={true}
       spaceBetween={500}
       modules={[Pagination, Navigation]}
+      ref={sliderRef}
+      lazyPreloadPrevNext={5}
       scrollbar={{
         hide: true,
       }}
-      className="mb-10"
     >
       {workSlider.slides.map((slide, index) => {
         return (
           <SwiperSlide key={index}>
             {/* mobile text */}
-            <div className="h-[200px]  md:hidden pt-5">
+            <div className="h-[250px] sm:h-[250px]  md:hidden pt-5">
               <h2>{slide.title}</h2>
               <p className="md:hidden py-1">{slide.blurb}</p>
               <div className="flex justify-between w-[60%] gap-x-5 py-5">

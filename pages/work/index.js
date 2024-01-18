@@ -6,12 +6,25 @@ import Circles from '../../components/Circles';
 // framer motion
 import { motion } from 'framer-motion';
 import { fadeIn } from '../../variants';
+import { useRef, useCallback } from 'react';
 
 const Work = () => {
+  const sliderRef = useRef(null);
+
+  const handlePrev = useCallback(() => {
+    if (!sliderRef.current) return;
+    sliderRef.current.swiper.slidePrev();
+  }, []);
+
+  const handleNext = useCallback(() => {
+    if (!sliderRef.current) return;
+    sliderRef.current.swiper.slideNext();
+  }, []);
+
   return (
     <div className="h-full bg-gradient-to-b from-transparent to-primary/50 flex items-center mt-[85px] max-h-[calc(100dvh-164px)] xl:max-h-[calc(100dvh-85px)] overflow-y-auto">
       <div className="h-full container mx-auto flex flex-col align-middle">
-        <div className="flex flex-col xl:flex-row gap-x-8 h-fit xl:mr-20 my-auto px-2 md:px-0">
+        <div className="flex flex-col xl:flex-row gap-x-8 h-fit xl:mr-20 my-auto px-2 md:px-0 relative">
           {/* text */}
           <div className="text-center flex xl:w-[30vw] flex-col  xl:mb-0 ">
             <motion.h2
@@ -41,13 +54,28 @@ const Work = () => {
 
           {/* slider */}
           <motion.div
-            variants={fadeIn('down', 0.5)}
+            variants={fadeIn('down', 0)}
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="w-full xl:max-w-[65%] h-fit overflow-hidden max-h-[565px] md:max-h-[390px]"
+            className="xl:max-w-[65%]"
           >
-            <WorkSlider />
+            <div className=" h-fit max-h-[565px] md:max-h-[325px] overflow-hidden">
+              <WorkSlider
+                sliderRef={sliderRef}
+                className="overflow-hidden"
+              />
+            </div>
+            <div className="carousel-buttons relative h-32 w-20 mx-auto">
+              <button
+                className="swiper-button-prev absolute"
+                onClick={handlePrev}
+              />
+              <button
+                className="swiper-button-next absolute"
+                onClick={handleNext}
+              />
+            </div>
           </motion.div>
         </div>
       </div>
