@@ -20,6 +20,26 @@ module.exports = {
       lg: '960px',
       xl: '1200px',
     },
+    extend: {
+      colors: {
+        primary: '#131424',
+        secondary: '#393A47',
+        accent: '#FE6192',
+      },
+      backgroundImage: {
+        explosion: 'url("/bg-explosion.png")',
+        circles: 'url("/bg-circles.png")',
+        circleStar: 'url("/circle-star.svg")',
+        site: 'url("/site-bg.svg")',
+      },
+      animation: {
+        'spin-slow': 'spin 6s linear infinite',
+      },
+      fontFamily: {
+        poppins: [`var(--font-poppins)`, 'sans-serif'],
+        sora: [`var(--font-sora)`, 'sans-serif'],
+      },
+    },
   },
   container: {
     padding: {
