@@ -13,17 +13,15 @@ import { AnimatePresence, motion } from 'framer-motion';
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
   return (
-    <Layout>
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={router.route}
-          className="h-full"
-        >
-          <Transition />
-          <Component {...pageProps} />
-        </motion.div>
-      </AnimatePresence>
-    </Layout>
+    <>
+      <link
+        rel="icon"
+        href="/initialsSquare.png"
+        type="image/x-icon"
+        sizes="any"
+      ></link>
+      </Layout>
+    </>
   );
 }
 
