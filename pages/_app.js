@@ -3,6 +3,7 @@ import '../styles/globals.scss';
 //components
 import Layout from '../components/Layout';
 import Transition from '../components/Transition';
+import Head from 'next/head';
 
 //router
 import { useRouter } from 'next/router';
@@ -34,6 +35,18 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
+      <Head>
+        <meta
+          name="theme-color"
+          content="#261b4b"
+        />
+        <link
+          rel="icon"
+          href="/initialsSquare.png"
+          type="image/x-icon"
+          sizes="any"
+        ></link>
+      </Head>
       <Script
         strategy="afterInteractive"
         src="https://www.googletagmanager.com/gtag/js?id=G-E7CDSP4N58"
