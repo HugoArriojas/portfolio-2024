@@ -6,9 +6,13 @@ import Circles from '../../components/Circles';
 // framer motion
 import { motion } from 'framer-motion';
 import { fadeIn } from '../../variants';
-import { useRef, useCallback } from 'react';
+import { useRef, useCallback, useEffect } from 'react';
 
 const Work = () => {
+  useEffect(() => {
+    document.title = 'Hugo Arriojas - Work';
+  }, []);
+
   const sliderRef = useRef(null);
 
   const handlePrev = useCallback(() => {

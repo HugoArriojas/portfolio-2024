@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-key */
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 // icons
@@ -98,6 +98,10 @@ import Circles from '../../components/Circles';
 
 const About = () => {
   const [index, setIndex] = useState(0);
+  useEffect(() => {
+    document.title = 'Hugo Arriojas - About';
+  }, []);
+
   return (
     <div className="h-full text-center xl:text-left bg-gradient-to-b from-transparent to-primary/50 mt-[85px] max-h-[calc(100dvh-164px)] xl:max-h-[calc(100dvh-85px)] overflow-y-auto flex align-center">
       <div className="container mx-auto h-fit flex flex-col items-center xl:flex-row gap-x-6">
