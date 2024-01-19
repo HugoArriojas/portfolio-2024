@@ -18,9 +18,6 @@ import { AnimatePresence, motion } from 'framer-motion';
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
-  useEffect(() => {
-    document.title = 'Hugo Arriojas - Software Engineer';
-  }, []);
 
   useEffect(() => {
     const handleRouteChange = (url) => {
@@ -40,12 +37,22 @@ function MyApp({ Component, pageProps }) {
           name="theme-color"
           content="#261b4b"
         />
+        <title>Hugo Arriojas - Software Engineer</title>
         <link
           rel="icon"
           href="/initialsSquare.png"
           type="image/x-icon"
           sizes="any"
         ></link>
+
+        <meta
+          name="description"
+          content="Software engineer with expertise in web development and e-commerce solutions, specializing in creating scalable, acessible, and efficient web applications. Skilled in various programming languages, frameworks, and tools, I am committed to delivering high-quality solutions that meet user needs and business objectives. Let's connect and build the future together!"
+        />
+        <meta
+          name="keyword"
+          content="portfolio, javascript, software, developer"
+        />
       </Head>
       <Script
         strategy="afterInteractive"
