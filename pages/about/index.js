@@ -103,10 +103,10 @@ const About = () => {
   }, []);
 
   return (
-    <div className="h-full text-center xl:text-left bg-gradient-to-b from-transparent to-primary/50 mt-[85px] max-h-[calc(100dvh-164px)] xl:max-h-[calc(100dvh-85px)] overflow-y-auto flex align-center">
-      <div className="container mx-auto h-fit flex flex-col items-center xl:flex-row gap-x-6">
+    <div className="align-center mt-[85px] flex h-full max-h-[calc(100dvh-164px)] overflow-y-auto bg-gradient-to-b from-transparent to-primary/50 text-center xl:max-h-[calc(100dvh-85px)] xl:text-left">
+      <div className="container mx-auto flex h-fit flex-col items-center gap-x-6 xl:flex-row">
         {/* text */}
-        <div className="flex-1 flex flex-col justify-center px-4 lg:px-0">
+        <div className="flex flex-1 flex-col justify-center px-4 lg:px-0">
           <motion.h2
             variants={fadeIn('right', 0.2)}
             initial="hidden"
@@ -121,19 +121,19 @@ const About = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="xl:max-w-[500px] mx-auto xl:mx-0 mb-6 xl:px-0 text-left"
+            className="mx-auto mb-6 text-left xl:mx-0 xl:max-w-[500px] xl:px-0"
           >
             My name is Hugo Arriojas
-            <span className="text-accent"> (Ah-ree-oh-has) </span>and I am a
-            Software Engineer, Scrum Master, and marine scientist based out of
-            Ottawa, ON 🇨🇦
+            <span className="text-accent"> (Ah-ree-oh-has) </span>
+            and I am a Software Engineer, Scrum Master, and marine scientist
+            based out of Ottawa, ON 🇨🇦
           </motion.p>
           <motion.p
             variants={fadeIn('right', 0.4)}
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="xl:max-w-[500px] mx-auto xl:mx-0 mb-6 xl:px-0 text-left"
+            className="mx-auto mb-6 text-left xl:mx-0 xl:max-w-[500px] xl:px-0"
           >
             My educational background in web development is complemented by a
             Bachelor of Science with Honours in Marine Biology and Statistics
@@ -151,7 +151,7 @@ const About = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="xl:max-w-[500px] mx-auto xl:mx-0 mb-6 xl:px-0 text-left"
+            className="mx-auto mb-6 text-left xl:mx-0 xl:max-w-[500px] xl:px-0"
           >
             I am always eager to embrace new challenges, collaborate with
             like-minded professionals, and contribute to innovative projects.
@@ -161,7 +161,7 @@ const About = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="xl:max-w-[500px] mx-auto xl:mx-0 mb-6 xl:px-0 text-left"
+            className="mx-auto mb-6 text-left xl:mx-0 xl:max-w-[500px] xl:px-0"
           >
             Let&apos;s connect and explore the exciting intersections of
             technology and creativity!
@@ -171,10 +171,10 @@ const About = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="xl:max-w-[500px] mx-auto xl:mx-0 mb-6 xl:px-0 text-left font-normal"
+            className="mx-auto mb-6 text-left font-normal xl:mx-0 xl:max-w-[500px] xl:px-0"
           >
             <Link
-              className="text-accent mb-5"
+              className="mb-5 text-accent"
               href="https://medium.com/@hugo.arriojas/the-stillness-in-storms-4be5fc97e1a9"
               target="_blank"
             >
@@ -188,9 +188,9 @@ const About = () => {
           initial="hidden"
           animate="show"
           exit="hidden"
-          className="flex flex-col w-full xl:max-w-[45%] h-fit mb-10"
+          className="mb-10 flex h-fit w-full flex-col xl:max-w-[45%]"
         >
-          <div className="flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4">
+          <div className="mx-auto mb-4 flex gap-x-4 xl:mx-0 xl:gap-x-8">
             {aboutData.map((item, itemIndex) => {
               return (
                 <div
@@ -198,7 +198,7 @@ const About = () => {
                   className={`${
                     index === itemIndex &&
                     'text-accent after:w-[100%] after:bg-accent after:transition-all after:duration-300'
-                  }  cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px] after:bg-white after:absolute after:-bottom-1 after:left-0`}
+                  }  relative cursor-pointer capitalize after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-8 after:bg-white xl:text-lg`}
                   onClick={() => setIndex(itemIndex)}
                 >
                   {item.title}
@@ -206,17 +206,17 @@ const About = () => {
               );
             })}
           </div>
-          <div className="py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 items-center xl:items-start">
+          <div className="flex flex-col items-center gap-y-2 py-2 xl:items-start xl:gap-y-4 xl:py-6">
             {aboutData[index].info.map((item, itemIndex) => {
               return (
                 <div
                   key={itemIndex}
-                  className="flex-1 flex flex-col md:flex-row gap-x-2 xl:items-start justify-between text-white/60 xl:w-[430px] mb-5 md:mb-0"
+                  className="mb-5 flex flex-1 flex-col justify-between gap-x-2 text-white/60 md:mb-0 md:flex-row xl:w-[430px] xl:items-start"
                 >
                   {/* title */}
                   <div>
-                    <div className="font-light mb-2 md:mb-0">{item.title}</div>
-                    <div className="font-light mb-2 md:mb-0">
+                    <div className="mb-2 font-light md:mb-0">{item.title}</div>
+                    <div className="mb-2 font-light md:mb-0">
                       {item.workplace}
                     </div>
                   </div>

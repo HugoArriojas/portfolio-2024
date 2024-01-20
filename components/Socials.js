@@ -10,34 +10,34 @@ const Socials = () => {
       <Link
         href={'https://linkedin.com/in/hugoarriojas'}
         target="_blank"
-        className="hover:text-accent transition-all duration-300 relative flex items-center group"
+        className="group relative flex items-center transition-all duration-300 hover:text-accent"
       >
         <RiLinkedinBoxFill />
         {/* Tooltip */}
-        <div className="absolute top-9 -right-6 hidden group-hover:flex">
-          <div className="bg-white relative flex items-center p-[6px] rounded-[3px]">
-            <p className="text-[12px] leading-none font-semibold capitalize text-primary">
+        <div className="absolute -right-6 top-9 hidden group-hover:flex">
+          <div className="relative flex items-center rounded-[3px] bg-white p-[6px]">
+            <p className="text-[12px] font-semibold capitalize leading-none text-primary">
               LinkedIn
             </p>
             {/* triangle */}
-            <div className="border-solid border-b-white border-b-8 border-r-transparent border-l-transparent border-r-[6px] border-l-[6px] absolute -top-2 left-5"></div>
+            <div className="absolute -top-2 left-5 border-b-8 border-l-[6px] border-r-[6px] border-solid border-b-white border-l-transparent border-r-transparent"></div>
           </div>
         </div>
       </Link>
       <Link
         href={'https://github.com/HugoArriojas'}
         target="_blank"
-        className="hover:text-accent transition-all duration-300 relative flex items-center group"
+        className="group relative flex items-center transition-all duration-300 hover:text-accent"
       >
         <RiGithubFill />
         {/* Tooltip */}
-        <div className="absolute top-9 -left-4 hidden group-hover:flex">
-          <div className="bg-white relative flex items-center p-[6px] rounded-[3px]">
-            <p className="text-[12px] leading-none font-semibold capitalize text-primary">
+        <div className="absolute -left-4 top-9 hidden group-hover:flex">
+          <div className="relative flex items-center rounded-[3px] bg-white p-[6px]">
+            <p className="text-[12px] font-semibold capitalize leading-none text-primary">
               Github
             </p>
             {/* triangle */}
-            <div className="border-solid border-b-white border-b-8 border-r-transparent border-l-transparent border-r-[6px] border-l-[6px] absolute -top-2 left-5"></div>
+            <div className="absolute -top-2 left-5 border-b-8 border-l-[6px] border-r-[6px] border-solid border-b-white border-l-transparent border-r-transparent"></div>
           </div>
         </div>
       </Link>
