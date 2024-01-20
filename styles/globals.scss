@@ -50,7 +50,6 @@ $accent-color: #fe6192;
   color: #f13024;
 }
 
-// I do not advocate for using the !important property but this is to override the swiper default styles
 .swiper {
   .swiper-wrapper {
   @media (max-width: 640px) {
@@ -63,10 +62,14 @@ $accent-color: #fe6192;
       display: none;
   }
 
+  .swiper-horizontal>.swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal,
+  .swiper-pagination-custom,
+  .swiper-pagination-fraction,
   .swiper-pagination {
-    bottom: 20px !important;
+    bottom: 20px ;
     @media (max-width: 768px) {
-      bottom: 0px !important;
+      bottom: 0px;
       }
   }
 }
@@ -74,16 +77,16 @@ $accent-color: #fe6192;
 .carousel-buttons {
   .swiper-button-next,
   .swiper-button-prev {
-    z-index: 15 !important;
-    width: 50px !important;
-    height: 50px !important;
-    top: 30px !important;
+    z-index: 15 ;
+    width: 50px ;
+    height: 50px ;
+    top: 30px ;
   }
   .swiper-button-prev {
-    left: -30% !important;
+    left: -30% ;
   }
   .swiper-button-next {
-    left: 67% !important;
+    left: 67% ;
   }
 }
 
