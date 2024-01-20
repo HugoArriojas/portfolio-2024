@@ -26,11 +26,11 @@ const Work = () => {
   }, []);
 
   return (
-    <div className="h-full bg-gradient-to-b from-transparent to-primary/50 flex items-center mt-[85px] max-h-[calc(100dvh-164px)] xl:max-h-[calc(100dvh-85px)] overflow-y-auto">
-      <div className="h-full container mx-auto flex flex-col align-middle">
-        <div className="flex flex-col xl:flex-row gap-x-8 h-fit xl:mr-20 my-auto px-2 md:px-0 relative">
+    <div className="mt-[85px] flex h-full max-h-[calc(100dvh-164px)] items-center overflow-y-auto bg-gradient-to-b from-transparent to-primary/50 xl:max-h-[calc(100dvh-85px)]">
+      <div className="container mx-auto flex h-full flex-col align-middle">
+        <div className="relative my-auto flex h-fit flex-col gap-x-8 px-2 md:px-0 xl:mr-20 xl:flex-row">
           {/* text */}
-          <div className="text-center flex xl:w-[30vw] flex-col  xl:mb-0 ">
+          <div className="flex flex-col text-center xl:mb-0  xl:w-[30vw] ">
             <motion.h2
               variants={fadeIn('up', 0.2)}
               initial="hidden"
@@ -45,7 +45,7 @@ const Work = () => {
               initial="hidden"
               animate="show"
               exit="hidden"
-              className="mb-4 xl:max-w-[400px] mx-auto text-left"
+              className="mx-auto mb-4 text-left xl:max-w-[400px]"
             >
               Having worked at Mercatus, I have a great deal of experience
               creating accessible & scalable white-label e-commerce products for
@@ -64,13 +64,9 @@ const Work = () => {
             exit="hidden"
             className="xl:max-w-[65%]"
           >
-            <div className=" h-fit max-h-[565px] md:max-h-[325px] overflow-hidden">
-              <WorkSlider
-                sliderRef={sliderRef}
-                className="overflow-hidden"
-              />
+            <div className=" h-fit max-h-[565px] overflow-hidden md:max-h-[325px]">
             </div>
-            <div className="carousel-buttons relative h-32 w-20 mx-auto">
+            <div className="carousel-buttons relative mx-auto h-32 w-20">
               <button
                 className="swiper-button-prev absolute"
                 onClick={handlePrev}

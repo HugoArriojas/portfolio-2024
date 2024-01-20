@@ -11,10 +11,10 @@ import { fadeIn } from '../variants';
 
 const Home = () => {
   return (
-    <div className="bg-gradient-to-b from-primary/0 via-black/50 to-back/60 h-full">
+    <div className="to-back/60 h-full bg-gradient-to-b from-primary/0 via-black/50">
       {/* Text */}
-      <div className="w-full h-full  relative z-40">
-        <div className="text-center flex flex-col justify-center xl:text-left h-full max-h-[calc(100dvh-164px)] xl:max-h-[calc(100dvh-85px)] mt-[88px] overflow-y-auto container mx-auto">
+      <div className="relative z-40  h-full w-full">
+        <div className="container mx-auto mt-[88px] flex h-full max-h-[calc(100dvh-164px)] flex-col justify-center overflow-y-auto text-center xl:max-h-[calc(100dvh-85px)] xl:text-left">
           {/* Tagline */}
           <motion.h1
             variants={fadeIn('down', 0.2)}
@@ -31,7 +31,7 @@ const Home = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="max-w-md xl:max-w-lg mx-auto xl:mx-0 mb-10 xl:mb-16"
+            className="mx-auto mb-10 max-w-md xl:mx-0 xl:mb-16 xl:max-w-lg"
           >
             Software engineer & marine biologist adept in developing e-commerce
             solutions & dedicated to fostering a more interconnected world
@@ -41,16 +41,16 @@ const Home = () => {
             initial="hidden"
             animate="show"
             exit="hidden xl:flex"
-            className="flex mb-2 sm:pb-0 relative"
+            className="relative mb-2 flex sm:pb-0"
           >
             <ProjectsBtn />
           </motion.div>
         </div>
       </div>
       {/* image */}
-      <div className="w-full h-full absolute right-0 bottom-0 ">
+      <div className="absolute bottom-0 right-0 h-full w-full ">
         {/* bg image */}
-        <div className="bg-none xl:bg-explosion xl:bg-cover xl:bg-right xl:bg-no-repeat w-full h-full absolute mix-blend-color-dodge translate-z-0 opacity-50"></div>
+        <div className="translate-z-0 absolute h-full w-full bg-none opacity-50 mix-blend-color-dodge xl:bg-explosion xl:bg-cover xl:bg-right xl:bg-no-repeat"></div>
         <ParticlesContainer />
         {/* headshot */}
         <motion.div
@@ -59,7 +59,7 @@ const Home = () => {
           animate="show"
           exit="hidden"
           transition={{ duration: 1, ease: 'easeInOut' }}
-          className="w-full h-full max-w max-w-[737px] max-h-[678px] absolute bottom-30 lg:bottom-0 lg:right-[5%]"
+          className="max-w bottom-30 absolute h-full max-h-[678px] w-full max-w-[737px] lg:bottom-0 lg:right-[5%]"
         >
           <Headshot />
         </motion.div>

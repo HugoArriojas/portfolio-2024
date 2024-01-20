@@ -35,26 +35,26 @@ const Nav = () => {
   const [directedPathname, setPathname] = useState(currentPathname);
 
   return (
-    <nav className="flex flex-col items-center xl:justify-center gap-y-4 fixed h-max bottom-0 mt-auto xl:right-[2%] z-50 top-0 w-full xl:w-16 xl:max-w-md xl:h-screen">
-      <div className="flex w-full xl:flex-col items-center justify-between xl:justify-center gap-y-10 px-4 md:px-40 xl:px-0 h-[80px] xl:h-max py-8 bg-white/10 backdrop-blur-sm text-3xl xl:text-xl xl:rounded-full">
+    <nav className="fixed bottom-0 top-0 z-50 mt-auto flex h-max w-full flex-col items-center gap-y-4 xl:right-[2%] xl:h-screen xl:w-16 xl:max-w-md xl:justify-center">
+      <div className="flex h-[80px] w-full items-center justify-between gap-y-10 bg-white/10 px-4 py-8 text-3xl backdrop-blur-sm md:px-40 xl:h-max xl:flex-col xl:justify-center xl:rounded-full xl:px-0 xl:text-xl">
         {navData.map((link, index) => {
           return (
             <Link
               className={`${
                 link.path === currentPathname && 'text-accent'
-              } relative flex items-center group hover:text-accent transition-all duration-300`}
+              } group relative flex items-center transition-all duration-300 hover:text-accent`}
               href={link.path}
               key={index}
               onClick={() => setPathname(link.path)}
             >
               {/* tooltip */}
-              <div className="absolute pr-14 right-0 hidden xl:group-hover:flex">
-                <div className="bg-white relative flex text-primary items-center p-[6px] rounded-[3px]">
-                  <div className="text-[12px] leading-none font-semibold capitalize">
+              <div className="absolute right-0 hidden pr-14 xl:group-hover:flex">
+                <div className="relative flex items-center rounded-[3px] bg-white p-[6px] text-primary">
+                  <div className="text-[12px] font-semibold capitalize leading-none">
                     {link.name}
                   </div>
                   {/* triangle */}
-                  <div className="border-solid border-l-white border-l-8 border-y-transparent border-y-[6px] border-r-0 absolute -right-2"></div>
+                  <div className="absolute -right-2 border-y-[6px] border-l-8 border-r-0 border-solid border-y-transparent border-l-white"></div>
                 </div>
               </div>
               {/* icon */}
