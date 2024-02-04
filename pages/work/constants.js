@@ -1,7 +1,7 @@
 export const workObjects = {
   mercatus: {
     title: 'Mercatus Technologies Inc.',
-    path: '/mercatus.png',
+    name: 'mercatus',
     detailsLink: '/work/mercatus',
     liveLink: 'https://hugo-portfolio-2022.netlify.app/',
     alt: 'Read more about my work experience at Mercatus',
@@ -12,7 +12,7 @@ export const workObjects = {
   },
   previousPortfolio: {
     title: 'Previous Portfolio',
-    path: '/previous-portfolio.png',
+    name: 'previous-portfolio',
     detailsLink: '/work/previous-portfolio',
     liveLink: 'https://hugo-portfolio-2022.netlify.app/',
     alt: 'Read more about my previous portfolio',
@@ -23,7 +23,7 @@ export const workObjects = {
   },
   reactiveRetail: {
     title: 'Reactive Retail',
-    path: '/reactive-retail.png',
+    name: 'reactive-retail',
     detailsLink: '/work/reactive-retail',
     liveLink: 'https://reactiveretail.netlify.app/',
     alt: 'Read more about my reactive retail bootcamp project',
@@ -34,7 +34,7 @@ export const workObjects = {
   },
   gifMeTheWeather: {
     title: 'GIF Me the Weather',
-    path: '/gif-weather.png',
+    name: 'gif-weather',
     detailsLink: '/work/gif-weather',
     liveLink: 'https://gifmetheweather.netlify.app/',
     alt: 'Read more about my weather app built in bootcamp',
@@ -45,7 +45,7 @@ export const workObjects = {
   },
   notSoSocial: {
     title: 'Not So Social Planner',
-    path: '/not-social.png',
+    name: 'not-social',
     detailsLink: '/work/not-social',
     liveLink: 'https://notsosocialplanner.netlify.app/',
     alt: 'Read more about my agency-style project built in bootcamp',
@@ -56,7 +56,7 @@ export const workObjects = {
   },
   delicious: {
     title: 'Delicious',
-    path: '/delicious.png',
+    name: 'delicious',
     detailsLink: '/work/delicious',
     liveLink: 'https://deliciouspsd.netlify.app/',
     alt: 'Read more about my first web dev project, a PSD conversion',
