@@ -8,6 +8,9 @@
 # testing
 /coverage
 
+# Blank photoshop screens
+/public/Blank screens.pdn
+
 # next.js
 /.next/
 /out/
