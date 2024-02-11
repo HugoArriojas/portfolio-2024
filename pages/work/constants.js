@@ -3,10 +3,8 @@ export const workObjects = {
     title: 'Mercatus Technologies Inc.',
     name: 'mercatus',
     detailsLink: '/work/mercatus',
-    liveLink: 'https://hugo-portfolio-2022.netlify.app/',
     alt: 'Read more about my work experience at Mercatus',
     blurb: 'White label e-commerce solutions',
-    github: 'https://github.com/HugoArriojas/portfolio-2024',
     technologies:
       'React, TypeScript, Apollo GraphQL, PHP, AngularJS, NextJS, Docker, Drupal, Bamboo, JIRA',
     section1: {
