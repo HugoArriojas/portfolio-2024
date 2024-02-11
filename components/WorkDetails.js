@@ -29,79 +29,124 @@ const WorkDetails = (props) => {
         {work.blurb}
       </motion.p>
       <motion.div
-        variants={fadeIn('down', 0)}
+        variants={fadeIn('right', 0)}
         initial='hidden'
         animate='show'
         exit='hidden'
-        className='relative flex items-center m-20'
+        className='relative flex flex-col md:flex-row items-center mx-5 my-10 justify-between'
       >
-        <div className='w-5 h-5 outline-dotted shadow-[0_0_90px_200px_#FE6192,0_0_90px_200px_#1d1536] absolute right-[60%] rounded-full'></div>
         <Image
-          src='/mercatus/mocks2.png'
-          width={804}
-          height={303}
+          src={`/${work.name}/mocks2.png`}
+          width={804 / 1.75}
+          height={303 / 1.75}
           alt={`Desktop image mockup of ${work.title} page`}
           className='z-10'
         />
+
+        <div className='flex flex-col  justify-between gap-x-5 gap-y-5 mt-8 md:mt-0 md:text-right'>
+          <motion.div
+            variants={fadeIn('down', 0)}
+            initial='hidden'
+            animate='show'
+            exit='hidden'
+          >
+            <h3 className='text-lg'>Technologies</h3>
+            <p>{work.technologies}</p>
+          </motion.div>
+          {work.liveLink && (
+            <Link
+              className='flex items-center gap-x-2 text-[13px] tracking-[0.2em] group md:ml-auto'
+              href={work.liveLink}
+              target='_blank'
+              cursor-pointer
+            >
+              <p className='font-bold group-hover:text-accent'>
+                LIVE&nbsp;PROJECT
+              </p>
+              <div className='text-xl group-hover:text-accent'>
+                <BsArrowRight />
+              </div>
+            </Link>
+          )}
+          {work.github && (
+            <Link
+              className='flex items-center gap-x-2 text-[13px] tracking-[0.2em] group md:ml-auto'
+              href={work.github}
+              target='_blank'
+              cursor-pointer
+            >
+              <p className='font-bold group-hover:text-accent'>GITHUB</p>
+              <div className='text-xl group-hover:text-accent'>
+                <BsArrowRight />
+              </div>
+            </Link>
+          )}
+        </div>
       </motion.div>
 
-      <motion.div
-        variants={fadeIn('down', 0)}
+      <motion.section
+        variants={fadeIn('left', 0)}
         initial='hidden'
         animate='show'
         exit='hidden'
+        className='relative flex items-center flex-col md:flex-row'
       >
-        <h3>Technologies</h3>
-        <p>{work.technologies}</p>
-      </motion.div>
+        {work.section1 && (
+          <motion.div
+            variants={fadeIn('down', 0)}
+            initial='hidden'
+            animate='show'
+            exit='hidden'
+            className='my-5 text-left mr-10 max-w-[75%]'
+          >
+            <h3 className='text-lg'>{work.section1.title}</h3>
+            <p>{work.section1.text}</p>
+          </motion.div>
+        )}
+        <Image
+          src={`/${work.name}/mocks3.png`}
+          width={804 / 3}
+          height={303 / 3}
+          alt={`Mobile image mockup of ${work.title} page`}
+          className='z-10 max-h-[350px] object-scale-down'
+        />
+      </motion.section>
+      {work.section2 && (
+        <motion.section
+          variants={fadeIn('down', 0)}
+          initial='hidden'
+          animate='show'
+          exit='hidden'
+          className='my-5'
+        >
+          <h3 className='text-lg'>{work.section2.title}</h3>
+          <p>{work.section2.text}</p>
+        </motion.section>
+      )}
+      {work.section3 && (
+        <motion.section
+          variants={fadeIn('down', 0)}
+          initial='hidden'
+          animate='show'
+          exit='hidden'
+          className='my-5'
+        >
+          <h3 className='text-lg'>{work.section3.title}</h3>
+          <p>{work.section3.text}</p>
+        </motion.section>
+      )}
 
-      {work.about && (
-        <motion.div
+      {work.section4 && (
+        <motion.section
           variants={fadeIn('down', 0)}
           initial='hidden'
           animate='show'
           exit='hidden'
           className='my-5'
         >
-          <h3>About</h3>
-          <p>{work.about}</p>
-        </motion.div>
-      )}
-      {work.challenges && (
-        <motion.div
-          variants={fadeIn('down', 0)}
-          initial='hidden'
-          animate='show'
-          exit='hidden'
-          className='my-5'
-        >
-          <h3>Challenges</h3>
-          <p>{work.challenges}</p>
-        </motion.div>
-      )}
-      {work.favourite && (
-        <motion.div
-          variants={fadeIn('down', 0)}
-          initial='hidden'
-          animate='show'
-          exit='hidden'
-          className='my-5'
-        >
-          <h3>Favourite Part</h3>
-          <p>{work.favourite}</p>
-        </motion.div>
-      )}
-      {work.nextSteps && (
-        <motion.div
-          variants={fadeIn('down', 0)}
-          initial='hidden'
-          animate='show'
-          exit='hidden'
-          className='my-5'
-        >
-          <h3>Next Steps</h3>
-          <p>{work.nextSteps}</p>
-        </motion.div>
+          <h3 className='text-lg'>{work.section4.title}</h3>
+          <p>{work.section4.text}</p>
+        </motion.section>
       )}
     </div>
   );

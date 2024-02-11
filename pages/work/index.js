@@ -71,41 +71,48 @@ const Work = () => {
                         target='_blank'
                         cursor-pointer
                       >
-                        <h2 className='group-hover:text-accent'>
+                        <h2 className='group-hover:text-accent mb-2'>
                           {workObjects[work].title}
                         </h2>
-                        <p className='text-[11px] h-10 py-auto flex items-center'>
+                        <p className='text-[11px] py-auto flex items-center'>
                           {workObjects[work].technologies}
                         </p>
                       </Link>
-                      <div className='flex flex-col sm:flex-row w-[60%] justify-between gap-x-5 gap-y-5  pt-2'>
-                        <Link
-                          className='flex items-center gap-x-2 text-[13px] tracking-[0.2em] group'
-                          href={workObjects[work].liveLink}
-                          target='_blank'
-                          cursor-pointer
-                        >
-                          <p className='font-bold group-hover:text-accent'>
-                            LIVE&nbsp;PROJECT
-                          </p>
-                          <div className='text-xl group-hover:text-accent'>
-                            <BsArrowRight />
-                          </div>
-                        </Link>
-                        <Link
-                          className='flex items-center gap-x-2 text-[13px] tracking-[0.2em] group'
-                          href={workObjects[work].github}
-                          target='_blank'
-                          cursor-pointer
-                        >
-                          <p className='font-bold group-hover:text-accent'>
-                            GITHUB
-                          </p>
-                          <div className='text-xl group-hover:text-accent'>
-                            <BsArrowRight />
-                          </div>
-                        </Link>
-                      </div>
+                      {(workObjects[work].liveLink ||
+                        workObjects[work].github) && (
+                        <div className='flex flex-col sm:flex-row w-[60%] justify-between gap-x-5 gap-y-5  pt-2'>
+                          {workObjects[work].liveLink && (
+                            <Link
+                              className='flex items-center gap-x-2 text-[13px] tracking-[0.2em] group'
+                              href={workObjects[work].liveLink}
+                              target='_blank'
+                              cursor-pointer
+                            >
+                              <p className='font-bold group-hover:text-accent'>
+                                LIVE&nbsp;PROJECT
+                              </p>
+                              <div className='text-xl group-hover:text-accent'>
+                                <BsArrowRight />
+                              </div>
+                            </Link>
+                          )}
+                          {workObjects[work].github && (
+                            <Link
+                              className='flex items-center gap-x-2 text-[13px] tracking-[0.2em] group'
+                              href={workObjects[work].github}
+                              target='_blank'
+                              cursor-pointer
+                            >
+                              <p className='font-bold group-hover:text-accent'>
+                                GITHUB
+                              </p>
+                              <div className='text-xl group-hover:text-accent'>
+                                <BsArrowRight />
+                              </div>
+                            </Link>
+                          )}
+                        </div>
+                      )}
                     </div>
                     <Link
                       className='mt-5 sm:mt-0 sm:max-w-[35%] group'
