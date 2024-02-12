@@ -29,7 +29,7 @@ const WorkDetails = (props) => {
         {work.blurb}
       </motion.p>
       <motion.div
-        variants={fadeIn('right', 0)}
+        variants={fadeIn('down', 0)}
         initial='hidden'
         animate='show'
         exit='hidden'
@@ -85,7 +85,7 @@ const WorkDetails = (props) => {
       </motion.div>
 
       <motion.section
-        variants={fadeIn('left', 0)}
+        variants={fadeIn('down', 0)}
         initial='hidden'
         animate='show'
         exit='hidden'
