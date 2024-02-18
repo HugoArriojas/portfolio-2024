@@ -25,38 +25,35 @@ const Work = () => {
       <div className='container mx-auto flex h-full flex-col align-middle'>
         <div className='relative flex h-full flex-col gap-x-8 my-10 px-2 md:px-0 xl:mr-20 xl:flex-row'>
           {/* text */}
-          <div className='flex flex-col text-center xl:mb-0  xl:w-[30vw] '>
-            <motion.h2
-              variants={fadeIn('up', 0.2)}
-              initial='hidden'
-              animate='show'
-              exit='hidden'
-              className='h2'
-            >
-              My work
-            </motion.h2>
-            <motion.p
-              variants={fadeIn('up', 0.4)}
-              initial='hidden'
-              animate='show'
-              exit='hidden'
-              className='mx-auto mb-4 text-left xl:max-w-[400px]'
-            >
-              Having worked at Mercatus, I have a great deal of experience
-              creating accessible & scalable white-label e-commerce products for
-              a variety of clients.
-              <br />I also have some personal projects and some past works from
-              bootcamp:
-            </motion.p>
-          </div>
+          <motion.div
+            variants={fadeIn('down', 0.2)}
+            initial='hidden'
+            animate='show'
+            exit='hidden'
+            className='flex flex-col text-center xl:mb-0  xl:w-[30vw] '
+          >
+            <h2 className='h2'>My work</h2>
+            <p className='mx-auto text-left xl:max-w-[400px]'>
+              Click a project to learn more
+            </p>
+          </motion.div>
 
           <motion.div
-            variants={fadeIn('down', 0)}
+            variants={fadeIn('down', 0.4)}
             initial='hidden'
             animate='show'
             exit='hidden'
             className='xl:max-w-[65%]'
           >
+            <div className='mb-4'>
+              <h3 className='text-left'>In progress:</h3>
+              <ul className='list-disc text-left ml-4'>
+                <li>Full stack MERN goal-tracking application</li>
+                <li>
+                  Adding verification and user accounts to Reactive Retail
+                </li>
+              </ul>
+            </div>
             <div className='h-full pb-20'>
               {workArray.map((work, index) => {
                 return (
@@ -71,9 +68,9 @@ const Work = () => {
                         target='_blank'
                         cursor-pointer
                       >
-                        <h2 className='group-hover:text-accent mb-2'>
+                        <h3 className='group-hover:text-accent mb-2'>
                           {workObjects[work].title}
-                        </h2>
+                        </h3>
                         <p className='text-[11px] py-auto flex items-center'>
                           {workObjects[work].technologies}
                         </p>
