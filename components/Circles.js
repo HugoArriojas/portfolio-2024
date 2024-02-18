@@ -3,13 +3,13 @@ import Image from 'next/image';
 
 const Circles = () => {
   return (
-    <div className="background-image absolute -bottom-2 -right-16 z-10 w-[200px] animate-pulse mix-blend-color-dodge duration-75 xl:w-[300px]">
+    <div className='background-image absolute -bottom-2 -right-16 z-10 w-[200px] animate-pulse mix-blend-color-dodge duration-75 xl:w-[300px]'>
       <Image
-        src={'/circles.png'}
+        src={'/background-assets/circles.png'}
         width={260}
         height={200}
-        className="h-full w-full"
-        alt=""
+        className='h-full w-full'
+        alt=''
       />
     </div>
   );

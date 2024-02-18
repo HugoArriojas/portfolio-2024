@@ -12,7 +12,7 @@ import { BsArrowRight } from 'react-icons/bs';
 // next image
 import Image from 'next/image';
 
-import { workObjects } from './constants';
+import { workObjects } from '../../public/constants';
 
 const Work = () => {
   useEffect(() => {
@@ -66,7 +66,7 @@ const Work = () => {
                         className='text-[13px] tracking-[0.2em] group group-hover/work:text-accent'
                         href={workObjects[work].detailsLink}
                         target='_blank'
-                        cursor-pointer
+                        cursor-pointer='true'
                       >
                         <h3 className='group-hover:text-accent mb-2'>
                           {workObjects[work].title}

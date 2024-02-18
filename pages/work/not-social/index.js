@@ -3,7 +3,7 @@ import Bulb from '../../../components/Bulb';
 import Circles from '../../../components/Circles';
 import WorkDetails from '../../../components/WorkDetails';
 
-import { workObjects } from '../constants';
+import { workObjects } from '../../../public/constants';
 
 // framer motion
 import { useEffect } from 'react';

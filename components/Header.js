@@ -14,7 +14,7 @@ const Header = () => {
         <div className='flex flex-row items-center justify-between px-2 pb-5 pt-8 md:px-0'>
           <Link href={'/'}>
             <Image
-              src={'/hugo-logo.svg'}
+              src={'/hugo-assets/hugo-logo.svg'}
               width={220}
               height={48}
               alt='Hugo Arriojas Logo'

@@ -14,7 +14,7 @@ export const navData = [
   { name: 'work', path: '/work', icon: <HiViewColumns /> },
   {
     name: 'resume',
-    path: '/HugoArriojasResume.pdf',
+    path: '/hugo-assets/HugoArriojasResume.pdf',
     icon: <RiArticleFill />,
   },
   {
