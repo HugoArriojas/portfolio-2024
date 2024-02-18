@@ -65,7 +65,6 @@ const Work = () => {
                       <Link
                         className='text-[13px] tracking-[0.2em] h-full group group-hover/work:text-accent'
                         href={workObjects[work].detailsLink}
-                        target='_blank'
                         cursor-pointer='true'
                       >
                         <h3 className='group-hover:text-accent mb-2'>
@@ -112,7 +111,6 @@ const Work = () => {
                     <Link
                       className='mt-5 sm:mt-0 sm:max-w-[35%] group'
                       href={workObjects[work].detailsLink}
-                      target='_blank'
                     >
                       <Image
                         src={`/${workObjects[work].name}/mocks1.png`}

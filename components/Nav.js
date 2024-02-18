@@ -60,7 +60,7 @@ const Nav = () => {
               {/* icon */}
               <div>
                 {directedPathname === link.path &&
-                currentPathname !== link.path ? (
+                !currentPathname.includes(link.path) ? (
                   <ThreeCircles
                     height='20'
                     width='20'
