@@ -53,7 +53,6 @@ const WorkDetails = (props) => {
               className='flex items-center gap-x-2 text-[13px] tracking-[0.2em] group md:ml-auto'
               href={work.liveLink}
               target='_blank'
-              cursor-pointer
             >
               <p className='font-bold group-hover:text-accent'>
                 LIVE&nbsp;PROJECT
@@ -68,7 +67,6 @@ const WorkDetails = (props) => {
               className='flex items-center gap-x-2 text-[13px] tracking-[0.2em] group md:ml-auto'
               href={work.github}
               target='_blank'
-              cursor-pointer
             >
               <p className='font-bold group-hover:text-accent'>GITHUB</p>
               <div className='text-xl group-hover:text-accent'>
