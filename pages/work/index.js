@@ -63,7 +63,7 @@ const Work = () => {
                   >
                     <div className='flex flex-col justify-between '>
                       <Link
-                        className='text-[13px] tracking-[0.2em] group group-hover/work:text-accent'
+                        className='text-[13px] tracking-[0.2em] h-full group group-hover/work:text-accent'
                         href={workObjects[work].detailsLink}
                         target='_blank'
                         cursor-pointer='true'
@@ -83,7 +83,6 @@ const Work = () => {
                               className='flex items-center gap-x-2 text-[13px] tracking-[0.2em] group'
                               href={workObjects[work].liveLink}
                               target='_blank'
-                              cursor-pointer
                             >
                               <p className='font-bold group-hover:text-accent'>
                                 LIVE&nbsp;PROJECT
@@ -98,7 +97,6 @@ const Work = () => {
                               className='flex items-center gap-x-2 text-[13px] tracking-[0.2em] group'
                               href={workObjects[work].github}
                               target='_blank'
-                              cursor-pointer
                             >
                               <p className='font-bold group-hover:text-accent'>
                                 GITHUB
@@ -115,7 +113,6 @@ const Work = () => {
                       className='mt-5 sm:mt-0 sm:max-w-[35%] group'
                       href={workObjects[work].detailsLink}
                       target='_blank'
-                      cursor-pointer
                     >
                       <Image
                         src={`/${workObjects[work].name}/mocks1.png`}
