@@ -12,7 +12,7 @@ const WorkDetails = (props) => {
   return (
     <div className='flex flex-col text-center pb-20'>
       <motion.h2
-        variants={fadeIn('down', 0.2)}
+        variants={fadeIn('down', 0)}
         initial='hidden'
         animate='show'
         exit='hidden'
@@ -21,7 +21,7 @@ const WorkDetails = (props) => {
         {work.title}
       </motion.h2>
       <motion.p
-        variants={fadeIn('down', 0)}
+        variants={fadeIn('down', 0.2)}
         initial='hidden'
         animate='show'
         exit='hidden'
@@ -29,7 +29,7 @@ const WorkDetails = (props) => {
         {work.blurb}
       </motion.p>
       <motion.div
-        variants={fadeIn('down', 0)}
+        variants={fadeIn('down', 0.2)}
         initial='hidden'
         animate='show'
         exit='hidden'
@@ -44,15 +44,10 @@ const WorkDetails = (props) => {
         />
 
         <div className='flex flex-col  justify-between gap-x-5 gap-y-5 mt-8 md:mt-0 md:text-right'>
-          <motion.div
-            variants={fadeIn('down', 0)}
-            initial='hidden'
-            animate='show'
-            exit='hidden'
-          >
+          <div>
             <h3 className='text-lg'>Technologies</h3>
             <p>{work.technologies}</p>
-          </motion.div>
+          </div>
           {work.liveLink && (
             <Link
               className='flex items-center gap-x-2 text-[13px] tracking-[0.2em] group md:ml-auto'
@@ -85,23 +80,17 @@ const WorkDetails = (props) => {
       </motion.div>
 
       <motion.section
-        variants={fadeIn('down', 0)}
+        variants={fadeIn('down', 0.2)}
         initial='hidden'
         animate='show'
         exit='hidden'
         className='relative flex items-center flex-col md:flex-row'
       >
         {work.section1 && (
-          <motion.div
-            variants={fadeIn('down', 0)}
-            initial='hidden'
-            animate='show'
-            exit='hidden'
-            className='my-5 text-left mr-10 max-w-[75%]'
-          >
+          <div className='my-5 text-left md:mr-10 md:max-w-[75%]'>
             <h3 className='text-lg'>{work.section1.title}</h3>
             <p>{work.section1.text}</p>
-          </motion.div>
+          </div>
         )}
         <Image
           src={`/${work.name}/mocks3.png`}
@@ -113,11 +102,11 @@ const WorkDetails = (props) => {
       </motion.section>
       {work.section2 && (
         <motion.section
-          variants={fadeIn('down', 0)}
+          variants={fadeIn('down', 0.2)}
           initial='hidden'
           animate='show'
           exit='hidden'
-          className='my-5'
+          className='my-5 text-left'
         >
           <h3 className='text-lg'>{work.section2.title}</h3>
           <p>{work.section2.text}</p>
@@ -125,11 +114,11 @@ const WorkDetails = (props) => {
       )}
       {work.section3 && (
         <motion.section
-          variants={fadeIn('down', 0)}
+          variants={fadeIn('down', 0.2)}
           initial='hidden'
           animate='show'
           exit='hidden'
-          className='my-5'
+          className='my-5 text-left'
         >
           <h3 className='text-lg'>{work.section3.title}</h3>
           <p>{work.section3.text}</p>
@@ -138,11 +127,11 @@ const WorkDetails = (props) => {
 
       {work.section4 && (
         <motion.section
-          variants={fadeIn('down', 0)}
+          variants={fadeIn('down', 0.2)}
           initial='hidden'
           animate='show'
           exit='hidden'
-          className='my-5'
+          className='my-5 text-left'
         >
           <h3 className='text-lg'>{work.section4.title}</h3>
           <p>{work.section4.text}</p>
