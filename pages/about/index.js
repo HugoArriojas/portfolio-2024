@@ -58,7 +58,7 @@ const aboutData = [
       {
         title: 'Software Engineer & Scrum Master',
         workplace: 'Mercatus Technologies Inc.',
-        stage: '2022 - Present',
+        stage: '2022 - 2024',
       },
       {
         title: 'Freelance Web Developer',
