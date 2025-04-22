@@ -4,7 +4,7 @@ import ProjectsBtn from '../components/ProjectsBtn';
 import Headshot from '../components/Headshot';
 
 // framer motion
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 
 //variants
 import { fadeIn } from '../variants';

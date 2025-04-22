@@ -4,7 +4,7 @@ import Circles from '../../components/Circles';
 import Link from 'next/link';
 
 // framer motion
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 import { fadeIn } from '../../variants';
 import { useEffect } from 'react';
 // icons

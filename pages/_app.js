@@ -14,7 +14,7 @@ import { useEffect } from 'react';
 import * as gtag from '../lib/gtag';
 
 // framer motion
-import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'motion/react';
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
