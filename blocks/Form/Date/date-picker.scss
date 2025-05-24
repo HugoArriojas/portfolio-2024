@@ -1,0 +1,26 @@
+.react-datepicker {
+  font-family: var(--font-afacad);
+}
+
+.react-datepicker__current-month {
+  font-weight: 500;
+}
+
+.react-datepicker__day-name {
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.react-datepicker__day:not([aria-disabled='true']):hover {
+  background-color: var(--primary-red-200);
+}
+
+.react-datepicker__day--keyboard-selected:not([aria-disabled='true']):hover {
+  background-color: var(--primary-red-600);
+}
+
+.react-datepicker__day--keyboard-selected,
+.react-datepicker__day--selected {
+  background-color: var(--primary-red-400);
+  color: white;
+}

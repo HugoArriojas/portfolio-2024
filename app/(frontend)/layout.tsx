@@ -18,6 +18,18 @@ export default async function RootLayout(props: { children: React.ReactNode }) {
       lang='en'
       className='portfolio-site'
     >
+      <head>
+        <link
+          href='/favicon.png'
+          rel='icon'
+          sizes='32x32'
+          type='image/x-icon'
+        />
+        <link
+          rel='preconnect'
+          href='https://fonts.googleapis.com'
+        />
+      </head>
       <body>
         <ClientLayout>{children}</ClientLayout>
       </body>

@@ -118,7 +118,7 @@ const About: NextPage = () => {
 
   return (
     <div className='align-center mt-[85px] flex h-full max-h-[calc(100dvh-164px)] overflow-y-auto bg-gradient-to-b from-transparent to-primary/50 text-center xl:max-h-[calc(100dvh-85px)] xl:text-left'>
-      <div className='container mx-auto flex h-fit flex-col items-center gap-x-6 xl:flex-row'>
+      <div className='container mx-auto flex h-fit flex-col items-start gap-x-6 xl:flex-row'>
         {/* text */}
         <div className='flex flex-1 flex-col justify-center px-4 lg:px-0'>
           <motion.h2
@@ -202,7 +202,7 @@ const About: NextPage = () => {
           initial='hidden'
           animate='show'
           exit='hidden'
-          className='mb-10 flex h-fit w-full flex-col xl:max-w-[45%]'
+          className='xl:mt-32 mb-10 flex h-fit w-full flex-col xl:max-w-[45%]'
         >
           <div className='mx-auto mb-4 flex gap-x-4 xl:mx-0 xl:gap-x-8'>
             {aboutData.map((item, itemIndex) => {
