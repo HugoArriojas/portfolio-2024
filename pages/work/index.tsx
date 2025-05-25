@@ -4,6 +4,7 @@ import Circles from '../../components/Circles';
 import Link from 'next/link';
 import { NextPage } from 'next';
 import React from 'react';
+import ExperienceBlock from '../../components/ExperienceBlock';
 
 // framer motion
 import { motion } from 'motion/react';
@@ -72,75 +73,14 @@ const Work: NextPage = () => {
               </ul>
             </div>
             <div className='h-full pb-20'>
-              {workArray.map((work, index) => {
+              {workArray.map((workKey, index) => {
+                const work = workObjects[workKey];
                 return (
-                  <div
+                  <ExperienceBlock
                     key={index}
-                    className='flex flex-col sm:flex-row justify-between bg-gradient-to-b from-primary/50 to-black/50 my-3 p-5 rounded-lg group/work'
-                  >
-                    <div className='flex flex-col justify-between '>
-                      <Link
-                        className='text-[13px] tracking-[0.2em] h-full group group-hover/work:text-accent'
-                        href={workObjects[work].detailsLink}
-                        cursor-pointer='true'
-                      >
-                        <h3 className='group-hover:text-accent mb-2'>
-                          {workObjects[work].title}
-                        </h3>
-                        <p className='text-[11px] py-auto flex items-center'>
-                          {workObjects[work].technologies}
-                        </p>
-                      </Link>
-                      {(workObjects[work].liveLink ||
-                        workObjects[work].github) && (
-                        <div className='flex flex-col sm:flex-row w-[60%] justify-between gap-x-5 gap-y-5  pt-2'>
-                          {workObjects[work].liveLink && (
-                            <Link
-                              className='flex items-center gap-x-2 text-[13px] tracking-[0.2em] group'
-                              href={workObjects[work].liveLink}
-                              target='_blank'
-                            >
-                              <p className='font-bold group-hover:text-accent'>
-                                LIVE&nbsp;PROJECT
-                              </p>
-                              <div className='text-xl group-hover:text-accent'>
-                                <BsArrowRight />
-                              </div>
-                            </Link>
-                          )}
-                          {workObjects[work].github && (
-                            <Link
-                              className='flex items-center gap-x-2 text-[13px] tracking-[0.2em] group'
-                              href={workObjects[work].github}
-                              target='_blank'
-                            >
-                              <p className='font-bold group-hover:text-accent'>
-                                GITHUB
-                              </p>
-                              <div className='text-xl group-hover:text-accent'>
-                                <BsArrowRight />
-                              </div>
-                            </Link>
-                          )}
-                        </div>
-                      )}
-                    </div>
-                    <Link
-                      className='mt-5 sm:mt-0 sm:max-w-[35%] group'
-                      href={workObjects[work].detailsLink}
-                    >
-                      <Image
-                        src={`/${workObjects[work].name}/mocks1.png`}
-                        height={1000}
-                        width={500}
-                        alt={
-                          workObjects[work].alt ||
-                          `Image of ${workObjects[work].title} project`
-                        }
-                        className='group-hover/work:scale-110 transition-all duration-700'
-                      />
-                    </Link>
-                  </div>
+                    work={work}
+                    index={index}
+                  />
                 );
               })}
             </div>
