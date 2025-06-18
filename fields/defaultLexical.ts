@@ -36,7 +36,7 @@ export const defaultLexical: Config['editor'] = lexicalEditor({
       BoldFeature(),
       ItalicFeature(),
       LinkFeature({
-        enabledCollections: ['pages', 'blog', 'trails'],
+        // enabledCollections: ['work'],
         fields: ({ defaultFields }) => {
           const defaultFieldsWithoutUrl = defaultFields.filter((field) => {
             if ('name' in field && field.name === 'url') return false;
@@ -72,7 +72,15 @@ export const defaultLexical: Config['editor'] = lexicalEditor({
         inlineBlocks: [IconLexicalBlock],
       }),
       TextColorFeature({
-        colors: ['#FFFFFF', '#000000', '#0d2e59', '#1a504f', '#55c19a', '#ffbf43', '#de4c23'],
+        colors: [
+          '#FFFFFF',
+          '#000000',
+          '#0d2e59',
+          '#1a504f',
+          '#55c19a',
+          '#ffbf43',
+          '#de4c23',
+        ],
       }),
       TextSizeFeature(),
       TextLetterSpacingFeature(),
