@@ -34,33 +34,33 @@ function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <meta
-          name="theme-color"
-          content="#261b4b"
+          name='theme-color'
+          content='#261b4b'
         />
         <title>Hugo Arriojas - Software Engineer</title>
         <link
-          rel="icon"
-          href="/initialsSquare.png"
-          type="image/x-icon"
-          sizes="any"
-        ></link>
+          href='/favicon.png'
+          rel='icon'
+          sizes='32x32'
+          type='image/x-icon'
+        />
 
         <meta
-          name="description"
+          name='description'
           content="Software engineer with expertise in web development and e-commerce solutions, specializing in creating scalable, acessible, and efficient web applications. Skilled in various programming languages, frameworks, and tools, I am committed to delivering high-quality solutions that meet user needs and business objectives. Let's connect and build the future together!"
         />
         <meta
-          name="keyword"
-          content="portfolio, javascript, software, developer"
+          name='keyword'
+          content='portfolio, javascript, software, developer'
         />
       </Head>
       <Script
-        strategy="afterInteractive"
-        src="https://www.googletagmanager.com/gtag/js?id=G-E7CDSP4N58"
+        strategy='afterInteractive'
+        src='https://www.googletagmanager.com/gtag/js?id=G-E7CDSP4N58'
       />
       <Script
-        id="google-analytics"
-        strategy="afterInteractive"
+        id='google-analytics'
+        strategy='afterInteractive'
         dangerouslySetInnerHTML={{
           __html: `
           window.dataLayer = window.dataLayer || [];
@@ -73,16 +73,16 @@ function MyApp({ Component, pageProps }) {
         }}
       />
       <link
-        rel="icon"
-        href="/initialsSquare.png"
-        type="image/x-icon"
-        sizes="any"
+        rel='icon'
+        href='/initialsSquare.png'
+        type='image/x-icon'
+        sizes='any'
       ></link>
       <Layout>
-        <AnimatePresence mode="wait">
+        <AnimatePresence mode='wait'>
           <motion.div
             key={router.route}
-            className="h-full"
+            className='h-full'
           >
             <Transition />
             <Component {...pageProps} />
