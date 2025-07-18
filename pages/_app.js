@@ -12,6 +12,7 @@ import { useRouter } from 'next/router';
 import Script from 'next/script';
 import { useEffect } from 'react';
 import * as gtag from '../lib/gtag';
+import { Analytics } from '@vercel/analytics/next';
 
 // framer motion
 import { AnimatePresence, motion } from 'framer-motion';
@@ -89,6 +90,7 @@ function MyApp({ Component, pageProps }) {
           </motion.div>
         </AnimatePresence>
       </Layout>
+      <Analytics />
     </>
   );
 }
