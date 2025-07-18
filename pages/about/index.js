@@ -56,7 +56,12 @@ const aboutData = [
     title: 'experience',
     info: [
       {
-        title: 'Software Engineer & Scrum Master',
+        title: 'Full Stack Developer',
+        workplace: 'The New Business',
+        stage: '2025 - Present',
+      },
+      {
+        title: 'Software Engineer',
         workplace: 'Mercatus Technologies Inc.',
         stage: '2022 - 2024',
       },
