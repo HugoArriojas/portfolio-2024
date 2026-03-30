@@ -32,7 +32,7 @@
     "eslint": "^9.0.0",
     "eslint-config-next": "^15.5.7",
     "postcss": "^8.4.33",
-    "tailwindcss": "^3.3.2"
+    "tailwindcss": "^4.2.2"
   },
   "overrides": {
     "immutable": "^5.1.5"
