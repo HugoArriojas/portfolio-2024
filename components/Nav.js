@@ -3,7 +3,12 @@ import { HiHome, HiUser, HiViewColumns, HiEnvelope } from 'react-icons/hi2';
 
 import { RiArticleFill } from 'react-icons/ri';
 import React, { useState } from 'react';
-import { ThreeCircles } from 'react-loader-spinner';
+import dynamic from 'next/dynamic';
+
+const ThreeCircles = dynamic(
+  () => import('react-loader-spinner').then((mod) => mod.ThreeCircles),
+  { ssr: false }
+);
 
 import { fadeIn } from '../variants';
 
