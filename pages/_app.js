@@ -43,7 +43,7 @@ function MyApp({ Component, pageProps }) {
           href='/favicon.png'
           rel='icon'
           sizes='32x32'
-          type='image/x-icon'
+          type='image/png'
         />
 
         <meta
@@ -73,12 +73,6 @@ function MyApp({ Component, pageProps }) {
         `,
         }}
       />
-      <link
-        rel='icon'
-        href='/initialsSquare.png'
-        type='image/x-icon'
-        sizes='any'
-      ></link>
       <Layout>
         <AnimatePresence mode='wait'>
           <motion.div
